@@ -8,6 +8,7 @@ void main() {
     isr_install();
     irq_install();
 
+    clear_screen();
     kprint("Cotton Candy Shell vID\n"
         "Type  HELP  for commands.\n> ");
 }
