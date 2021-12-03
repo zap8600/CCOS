@@ -47,7 +47,10 @@ void kprint_backspace() {
     int offset = get_cursor_offset()-2;
     int row = get_offset_row(offset);
     int col = get_offset_col(offset);
-    print_char(0x08, col, row, WHITE_ON_BLACK);
+    if (col == 1) { /* This is my way of keeping users from using backspace to delete everything on the screen. */
+    } else {
+        print_char(0x08, col, row, WHITE_ON_BLACK);
+    }
 }
 
 
