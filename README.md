@@ -12,7 +12,6 @@ When I started making this, I was coding it as a 16-bit Real Mode assembly. I wa
 * *kmalloc()* Requesting
 
 ## Features yet to be added
-* PC Speaker
 * Sound Blaster 16
 * Hard Drive R/W
 * File System
