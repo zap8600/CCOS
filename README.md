@@ -41,7 +41,7 @@ make clean
 If you don't use the *make run* command, you can do the following:
 ```
 sudo apt install qemu qemu-system
-qemu-system-i386 -hda os-image.bin
+qemu-system-i386 -fda os-image.bin
 ```
 Only install QEMU if you need to!
 
