@@ -16,7 +16,7 @@ When I started making this, I was coding it as a 16-bit Real Mode assembly. I wa
 
 ## Features yet to be added
 * Sound Blaster 16
-* IDE Drive R/W
+* ATA/ATAPI Drive R/W
 * File System
 * Userspace
 * Text Editor
@@ -26,7 +26,7 @@ When I started making this, I was coding it as a 16-bit Real Mode assembly. I wa
 
 ## Currently working on
 * Sound Blaster 16
-* IDE Drive R/W
+* ATA/ATAPI R/W
 
 ## Current Architectures
 * *i686-elf* (aka *i386-elf*)
