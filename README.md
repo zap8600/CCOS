@@ -1,12 +1,6 @@
 # Cotton Candy OS (CCOS)
 A barely developed OS.
 
-### Notice
-I'm currently looking for some developers that can help me. You can contact me by I emailing. If you email me, email both zapost86@gmail.com and zapost@chickasha.k12.ok.us
-
-### Thanks to...
-[Klaykap](https://github.com/Klaykap)! He is a very big help to me. I highly suggest you go check out his OS, [BleskOS](https://github.com/Klaykap/BleskOS). 
-
 ## Why did I create it?
 When I started making this, I was coding it as a 16-bit Real Mode assembly. I wasn't that great at assembly because I mainly use C. Eventually, I wanted to make it in C. At the time, I didn't think that 64-bit processors could run 16-bit code, so I wanted to make it 32-bit. I searched for a while, but couldn't find any information. But when I was about to give up, I found someone on Github called [cfenollosa](https://github.com/cfenollosa) with [this tutorial](https://github.com/cfenollosa/os-tutorial) that was exactly what I needed. At the time, I wasn't able to start building, so I studied it. Eventually, I was able to start.
 
@@ -18,6 +12,7 @@ When I started making this, I was coding it as a 16-bit Real Mode assembly. I wa
 * *kmalloc()* Requesting
 
 ## Features yet to be added
+* Floppy Drive Support
 * Sound Blaster 16
 * ATA/ATAPI Drive R/W
 * File System
@@ -28,14 +23,14 @@ When I started making this, I was coding it as a 16-bit Real Mode assembly. I wa
 * Etc.
 
 ## Currently working on
-* Sound Blaster 16
-* ATA/ATAPI R/W
+* Floppy Drive Support
 
 ## Current Architectures
 * *i686-elf* (aka *i386-elf*)
 
 ## Current Architectures Becoming Supported
 * *x86_64-elf*
+* *arm-none-eabi* (for Raspberry Pis)
 
 ## How to compile and run
 If you want to compile this, you can look at the [OSDev Wiki's page on making a GCC Cross-Compiler](https://wiki.osdev.org/GCC_Cross-Compiler) for making the cross compiler. Using GCC version 8.3.0 and Binutils version 2.37 worked best for me. Use the same flags the Wiki's page uses. Make sure the target is *i686-elf*. To compile the OS, head to the directory where the files are extracted and run these commands:
