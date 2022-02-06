@@ -10,5 +10,5 @@
 * Added more commands.
 * Added more to the floppy driver (still doesn't do much).
 * Modified some text.
-* Addad a new function to `string.c`.
+* Added a new function to `string.c`.
 * And more.
