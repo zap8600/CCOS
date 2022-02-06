@@ -10,6 +10,7 @@ When I started making this, I was coding it as a 16-bit Real Mode assembly. I wa
 * Keyboard Input
 * VGA Graphics
 * *kmalloc()* Requesting
+* Floppy Drive Driver (barely)
 
 ## Features yet to be added
 * Floppy Drive Support
@@ -29,7 +30,6 @@ When I started making this, I was coding it as a 16-bit Real Mode assembly. I wa
 * *i686-elf* (aka *i386-elf*)
 
 ## Current Architectures Becoming Supported
-* *x86_64-elf*
 * *arm-none-eabi* (for Raspberry Pis)
 
 ## How to compile and run
