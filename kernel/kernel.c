@@ -13,7 +13,7 @@ void main() {
 	kprint("Installing Interrupts...");
     isr_install();
     irq_install();
-    kprint("\nCotton Candy Shell v0.0.2\n"
+    kprint("\nCotton Candy Shell v0.0.3\n"
         "Type  HELP  for commands.\n> ");
 }
 
