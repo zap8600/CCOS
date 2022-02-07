@@ -10,6 +10,8 @@ typedef          short s16;
 typedef unsigned char  u8;
 typedef          char  s8;
 
+typedef enum {false, true} bool;
+
 #define low_16(address) (u16)((address) & 0xFFFF)
 #define high_16(address) (u16)(((address) >> 16) & 0xFFFF)
 
