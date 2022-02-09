@@ -30,7 +30,8 @@ When I started making this, I was coding it as a 16-bit Real Mode assembly. I wa
 * *i686-elf* (aka *i386-elf*)
 
 ## Current Architectures Becoming Supported
-* *arm-none-eabi* (for Raspberry Pis)
+* *arm-none-eabi* (for Raspberry Pis 0, 1, 2, 3, & 4)
+* *aarch64-elf* (for Raspberry Pis 3 & 4)
 
 ## How to compile and run
 If you want to compile this, you can look at the [OSDev Wiki's page on making a GCC Cross-Compiler](https://wiki.osdev.org/GCC_Cross-Compiler) for making the cross compiler. Using GCC version 8.3.0 and Binutils version 2.37 worked best for me. Use the same flags the Wiki's page uses. Make sure the target is *i686-elf*. To compile the OS, head to the directory where the files are extracted and run these commands:
