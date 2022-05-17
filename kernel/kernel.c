@@ -3,7 +3,6 @@
 #include "kernel.h"
 #include "../libc/string.h"
 #include "../libc/mem.h"
-#include "../drivers/floppy.h"
 
 int svstr = 0;
 char usrstr[20];
@@ -22,11 +21,9 @@ void user_input(char *input) {
         kprint("\nHELP  Displays this information.\n"
                "END  Halts the CPU.\n"
                "PAGE  Requests a kmalloc().\n"
-			   "FLOPPY CHECK  Waits until the floppy drive is ready.\n"
 			   "CLEAR  Clears the screen.\n"
 			   "SAVE STRING  Saves a string from the user.\n"
-			   "READ STRING  Reads the saved string\n"
-			   "FLOPPY VERSION  Checks what floppy controller is found.\n"
+			   "READ STRING  Reads the saved string.\n"
                "\n> ");
     } else if (strcmp(input, "END") == 0) {
         kprint("\nStopping the CPU. Bye!\n"
@@ -45,30 +42,9 @@ void user_input(char *input) {
         kprint(", physical address: ");
         kprint(phys_str);
         kprint("\n\n> ");
-    } else if (strcmp(input, "FLOPPY CHECK") == 0) {
-		floppy_wait_until_ready();
-		kprint("\nFloppy is now ready.\n"
-		       "\n> ");
 	} else if (strcmp(input, "CLEAR") == 0) {
 		clear_screen();
 		kprint("> ");
-	} else if (strcmp(input, "FLOPPY VERSION") == 0) {
-		int v;
-		floppy_wait_until_ready();
-		floppy_sendbyte(VERSION);
-		v = floppy_getbyte();
-		if (v == 0xFF) {
-			kprint("\nFloppy Controller not found.\n");
-		} else if (v == 0x80) {
-			kprint("\nNEC Floppy Controller found.\n");
-		} else if (v == 0x81) {
-			kprint("\nVMware Floppy Controller found.\n");
-		} else if (v == 0x90) {
-			kprint("\nEnhanced Floppy Controller found.\n");
-		} else {
-			kprint("\nUnknown Floppy Controller found.\n");
-		}
-		kprint("\n> ");
 	} else if (strcmp(input, "SAVE STRING") == 0) {
 		svstr = 1;
 		kprint("\nPlease input string."
